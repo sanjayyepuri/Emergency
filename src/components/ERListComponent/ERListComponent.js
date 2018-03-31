@@ -21,6 +21,7 @@ export class ERListComponent extends React.Component {
                     <View>
                         <Title>{er.name}</Title>
                         <Text>{er.address}</Text>
+                        <Text>{er.phoneText}</Text>
                     </View>
                 </Row>            
             </View>

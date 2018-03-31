@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { RkStyleSheet } from 'react-native-ui-kitten';
-import { ListView, Row, Subtitle } from '@shoutem/ui';
+import { ListView, Row, Subtitle, Title } from '@shoutem/ui';
 
 import sample_er from '../../../sample-ers';
 
@@ -19,7 +19,7 @@ export class ERListComponent extends React.Component {
             <View>
                 <Row>
                     <View>
-                        <Subtitle>{er.name}</Subtitle>
+                        <Title>{er.name}</Title>
                         <Text>{er.address}</Text>
                     </View>
                 </Row>            

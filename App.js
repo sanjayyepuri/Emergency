@@ -1,8 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import { Font } from 'expo';
 
 import { HomeScreen, TreatmentScreen} from './src/screens';
+import { bootstrap } from './src/config/bootstrap';
+
+bootstrap();
+
+
 
 const RootStack = StackNavigator({
   Home: {
@@ -18,8 +24,34 @@ const RootStack = StackNavigator({
 );
 
 export default class App extends React.Component {
+  state = {
+    loaded: false
+  };
+
+  _loadAssets = async() => {
+    await Font.loadAsync({
+      'fontawesome': require('./src/assets/fonts/fontawesome.ttf'),
+      'icomoon': require('./src/assets/fonts/icomoon.ttf'),
+      'Righteous-Regular': require('./src/assets/fonts/Righteous-Regular.ttf'),
+      'Roboto-Bold': require('./src/assets/fonts/Roboto-Bold.ttf'),
+      'Roboto-Medium': require('./src/assets/fonts/Roboto-Medium.ttf'),
+      'Roboto-Regular': require('./src/assets/fonts/Roboto-Regular.ttf'),
+      'Roboto-Light': require('./src/assets/fonts/Roboto-Light.ttf'),
+    });
+    this.setState({loaded: true});
+  };
+
+  componentWillMount() {
+    this._loadAssets();
+  }
+
+
   render() {
-    return <RootStack />
+    if(this.state.loaded){
+      return <RootStack />
+    } else {
+      return (<Text>Loading </Text>)
+    }
   }
 }
 

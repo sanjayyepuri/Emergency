@@ -15,14 +15,14 @@ export class TreatmentScreen extends React.Component {
 
     render() {
         var treatment = [];
-        data.steps.forEach((step, i) => treatment.push({index: i+1, step: step}));
+        data.steps.forEach((step, i) => treatment.push({key: i+1, step: step}));
 
         return (
         <View>
             <RkText>HELLO</RkText>
             <FlatList
                 data = { treatment }
-                renderItem = { ({item}) => <Text>{item.index}. {item.step}</Text>}
+                renderItem = { ({item}) => <Text>{item.key}. {item.step}</Text>}
                 />
         </View>
       );

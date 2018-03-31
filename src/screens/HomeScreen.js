@@ -6,7 +6,7 @@ import { SearchEmergencyComponent, ERListComponent, EmergencyCallComponent } fro
 
 export class HomeScreen extends React.Component {
     static navigationOptions = {
-        title : 'Home'
+        title : 'Emergency'
     };
 
     

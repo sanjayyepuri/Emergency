@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import { RkStyleSheet } from 'react-native-ui-kitten';
 import call from 'react-native-phone-call';
 
 const callER = {
-    number: '911',
+    number: '911 ',
     prompt: false
 }
 
@@ -21,9 +21,10 @@ export class EmergencyCallComponent extends React.Component {
 
     render() {
         return (
-            <Button>
+            <Button
                 onPress = {this._onPressButton}
                 title = "Call an Emergency Hotline"
+            >
             </Button>
         );
     }

@@ -24,7 +24,7 @@ export class EmergencyCallComponent extends React.Component {
         return (
 
                 <View style = {styles.buttonContainer} >
-                    <Button
+                    <Button 
                         onPress = {this._onPressButton}
                         title="Call 911"           
                     >
@@ -40,6 +40,7 @@ let styles = RkStyleSheet.create(theme => ({
         justifyContent: 'center'
     },
     buttonContainer: {
+        fixed: 'bottom',
         margin: 15
     }
   }));

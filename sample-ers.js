@@ -24,12 +24,12 @@ export default sanmple_er = { data:
             phone: '7377174100',
             phoneText: "(737)717-4100"
         },
-        {
-            name: "First Choice Emergency Room",
-            address: "4015 S Lamar Blvd",
-            phone: '5127745780',
-            phoneText: "(512)774-5780"
-        },
+        // {
+        //     name: "First Choice Emergency Room",
+        //     address: "4015 S Lamar Blvd",
+        //     phone: '5127745780',
+        //     phoneText: "(512)774-5780"
+        // },
 
     ]
 }

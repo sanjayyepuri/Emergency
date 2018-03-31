@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native'
+import { ScrollView } from 'react-native'
 
 import { SearchEmergencyComponent, ERListComponent, EmergencyCallComponent } from '../components'
 
@@ -12,11 +12,11 @@ export class HomeScreen extends React.Component {
     
     render() {
         return (
-        <View>
+        <ScrollView>
             <SearchEmergencyComponent navigation={ this.props.navigation }/>
             <ERListComponent />
             <EmergencyCallComponent />
-        </View>        
+        </ScrollView>        
         );
     }
 }
